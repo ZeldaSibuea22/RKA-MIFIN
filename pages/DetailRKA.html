@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="https://my.its.ac.id/assets/media/favicons/favicon-web.png"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+    crossorigin="anonymous"
+    />
+    <link
+    href="https:/s/cdn.datatables.net/v/dt/jqc-1.12.4/dt-1.13.4/r-2.4.1/datatables.min.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
+    <script src="https://kit.fontawesome.com/a2752e5337.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./../styles/style.css">
+    <title>Detail RKA</title>
+</head>
+
+<body>
+    <div>
+       <!-- title -->  
+    <object data="./../layout/header.html" type="text/html" height="100px" width="100%"></object> 
+        <div class="d-flex w-100">
+            
+                <object class="bg-red"type="text/html" data="./../layout/sidebar.html" width="200" height="500"></object>
+            
+            <div class="w-100 p-5">
+                <section class="w-100">
+                    <div class="content-title-container">
+                        <img src="./../assets/svg-icon/arrow-left.svg" alt="arrow-left" />
+                        <div class="title text-color-dark text-fw-500">
+                            RKA 2023 Definitif Informatika
+                        </div>
+                    </div>
+                </section>
+                 <!-- stepper --> 
+                <section class="w-100">
+                    <div id="multi-step-form-container">
+                         <!-- Form Steps / Progress Bar --> 
+                        <ul class="form-stepper form-stepper-horizontal text-center mx-auto">
+                             <!-- Step 1 --> 
+                            <li class="form-stepper-active text-center form-stepper-list" step="1">
+                                <a class="d-flex mx-2">
+                                    <span class="form-stepper-circle mx-2">
+                                        <span>1</span>
+                                    </span>
+                                    <div class="label">Pembuatan RKA</div>
+                                </a>
+                            </li>
+        
+                             <!-- Step 2 --> 
+                            <li class="form-stepper-unfinished text-center form-stepper-list" step="2">
+                                <a class="d-flex mx-2">
+                                    <span class="form-stepper-circle text-muted mx-2">
+                                        <span>2</span>
+                                    </span>
+                                    <div class="label text-muted">Komponen Biaya</div>
+                                </a>
+                            </li>
+                             <!-- Step 3 --> 
+                            <li class="form-stepper-unfinished text-center form-stepper-list" step="3">
+                                <a class="d-flex mx-2">
+                                    <span class="form-stepper-circle text-muted mx-2">
+                                        <span>3</span>
+                                    </span>
+                                    <div class="label text-muted">TOR</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                 <!-- card detail rka --> 
+        
+                <section>
+                    <div>
+                        <section id="step-1" class="form-step">
+                             <!-- Step 1 input fields --> 
+                            <div class="mt-3">
+                                <div class="card-custom">
+                                    <div class="form-group">
+                                        <h5 class="mb-3">RKA</h5>
+                                        <hr />
+                                        <div class="input-content d-flex ">
+                                            <div class="input-line">
+                                                <p class="input-text">
+                                                    Program Kerja ITS
+                                                </p>
+                                                <p class="p-2">:</p>
+                                            </div>
+                                            <p class="form-text">
+                                                D12 Penguatan Organisasi yang Efektif dan Efisien dan beriorientasi layanan prima
+                                            </p>
+                                        </div>
+                                        <div class="input-content d-flex ">
+                                            <div class="input-line">
+                                                <p class="input-text">
+                                                    Program Kerja Unit
+                                                </p>
+                                                <p class="p-2">:</p>
+                                            </div>
+                                            <span class="d-flex gap-3">
+                                                <p class="form-text d-flex">Pilih Program Kerja Unit</p>
+                                                <i class="bi bi-box-arrow-up-right"></i>
+                                            </span>
+                                        </div>
+                                        <div class="input-content d-flex ">
+                                            <div class="input-line">
+                                                <p class="input-text">
+                                                    Kegiatan
+                                                </p>
+                                                <p class="p-2">:</p>
+                                            </div>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" aria-label="kode" />
+                                            </div>
+                                        </div>
+                                        <div class="input-content d-flex " >
+                                            <div class="input-line">
+                                                <p class="input-text">
+                                                    Sifat Kegiatan
+                                                </p>
+                                                <p class="p-2">:</p>
+                                            </div>
+                                            <select
+                                                class="filter text-12 text-color-grey-filter d-flex align-item-top"
+                                                name="periode"
+                                                id="periode"
+                                                style="width: 200px;"
+                                                onchange="changeColor(this)"
+                                            >
+                                                <option value="" selected>Pilih Sifat Kegiatan</option>
+                                                <option value="Rutin">Rutin</option>
+                                                <option value="Pengembangan">Pengembangan</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-content d-flex">
+                                            <div class="input-line">
+                                                <p class="input-text">
+                                                    Sumber Dana
+                                                </p>
+                                                <p class="p-2">:</p>
+                                            </div>
+                                            <select
+                                                class="filter text-12 text-color-grey-filter"
+                                                name="periode"
+                                                id="periode"
+                                                style="width: 200px;"
+        
+                                                onchange="changeColor(this)"
+                                            >
+                                                <option value="" selected>Pilih Sumber Dana</option>
+                                                <option value="PNBP">PNBP</option>
+                                                <option value="Non PNBP">Non PNBP</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-content d-flex">
+                                            <div class="input-line">
+                                                <p class="input-text">
+                                                    Mata Uang
+                                                </p>
+                                                <p class="p-2">:</p>
+                                            </div>
+                                            <select
+                                                class="filter text-12 text-color-grey-filter"
+                                                name="periode"
+                                                id="periode"
+                                                style="width: 200px;"
+        
+                                                onchange="changeColor(this)"
+                                            >
+                                                <option value="" selected>Pilih Mata Uang</option>
+                                                <option value="Rupiah">Rupiah</option>
+                                                <option value="Dollar">Dollar</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-content d-flex ">
+                                            <div class="input-line">
+                                                <p class="input-text">
+                                                    Biaya Kegiatan
+                                                </p>
+                                                <p class="p-2">:</p>
+                                            </div>
+                                            <div class="input-group">
+                                                <p class="form-text">
+                                                    Rp 0
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="input-content d-flex ">
+                                            <div class="input-line">
+                                                <p class="input-text">
+                                                    Pagu Unit Kerja
+                                                </p>
+                                                <p class="p-2">:</p>
+                                            </div>
+                                            <div class="input-group d-flex gap-5">
+                                                <div class="form-text d-flex gap-1">
+                                                    <p class="fw-bold"> Pagu : </p>
+                                                    <p>Rp1.000.000</p>
+                                                </div>
+                                                <div class="form-text d-flex gap-1">
+                                                    <p class="fw-bold"> Sisa : </p>
+                                                    <p>Rp1.000.000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-content d-flex" >
+                                            <div class="input-line">
+                                                <p class="input-text">
+                                                    Klasifikasi Kegiatan
+                                                </p>
+                                                <p class="p-2">:</p>
+                                            </div>
+                                            <select
+                                                class="filter text-12 text-color-grey-filter"
+                                                name="periode"
+                                                id="periode"
+                                                style="width: 200px;"
+        
+                                                onchange="changeColor(this)"
+                                            >
+                                                <option value="" selected>Pilih Klasifikasi Kegiatan</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-content d-flex ">
+                                            <div class="input-line">
+                                                <p class="input-text">
+                                                    Volume dan Satuan Output
+                                                </p>
+                                                <p class="p-2">:</p>
+                                            </div>
+                                            <div class="input-group d-flex gap-5">
+                                                <div class="form-text d-flex gap-3">
+                                                    <p class=" text-label fw-bold d-flex"> Volume : </p>
+                                                    <input type="text" class="form-control" aria-label="kode" />
+                                                </div>
+                                                <div class="form-text d-flex gap-3"
+                                                    style="height: 40px;">
+                                                    <p class="d-flex fw-bold"> Satuan : </p>
+                                                    <select
+                                                        class="filter text-12 text-color-grey-filter"
+                                                        name="periode"
+                                                        id="periode"
+                                                        style="width: 200px;
+                                          height: 38px;"
+        
+                                                        onchange="changeColor(this)"
+                                                    >
+                                                        <option class="align-item-top" value="" selected>Pilih Satuan</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-content d-flex ">
+                                            <div class="input-line">
+                                                <p class="input-text">
+                                                    Data Pendukung
+                                                </p>
+                                                <p class="p-2">:</p>
+                                            </div>
+                                            <div class="input-group">
+                                                <div class="input-group custom-file-button">
+                                                    <label class="input-group-text" for="inputGroupFile">Pilih File</label>
+                                                    <input type="file" class="form-control" id="inputGroupFile" />
+                                                </div>
+                                            </div>
+        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-custom">
+                                    <div class="form-group">
+                                        <h5 class="mb-3">KPI Unit</h5>
+                                        <hr />
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Jumlah Kegiatan Internasional yang diselenggarakan (Seminar,Kuliah Tamu)
+                                                </label>
+                                            </input>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-custom">
+                                    <div class="form-group">
+                                        <h5 class="mb-3">Jadwal Kegiatan</h5>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Januari
+                                                        </label>
+                                                    </input>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Februari
+                                                        </label>
+                                                    </input>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Maret
+                                                        </label>
+                                                    </input>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            April
+                                                        </label>
+                                                    </input>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Mei
+                                                        </label>
+                                                    </input>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Juni
+                                                        </label>
+                                                    </input>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Juli
+                                                        </label>
+                                                    </input>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Agustus
+                                                        </label>
+                                                    </input>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            September
+                                                        </label>
+                                                    </input>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Oktober
+                                                        </label>
+                                                    </input>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Nopember
+                                                        </label>
+                                                    </input>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Desember
+                                                        </label>
+                                                    </input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="button btn-navigate-form-step" type="button" step_number="2">Selanjutnya</button>
+                            </div>
+                        </section>
+        
+                     <!-- Step 2 Content, default hidden on page load. -->
+                        <section id="step-2" class="form-step d-none">
+                            <!-- Step 2 input fields -->
+                            <div class="mt-3">
+                            <div class="card-custom">
+                                <div class="form-group">
+                                <div class="util-container display-flex justify-content-space-between align-item-center">
+                                    <h5 class="d-flex mb-3">Komponen Biaya</h5>
+                                    <a
+                                    href ="" class="button button-filled-blue display-flex align-item-center gap-8 text-center" style="height:40px; width: auto;">
+                                    <img src="./../assets/svg-icon/plus-icon.svg" alt="">
+                                    <div class="text-color-white text-fw-500 text-14 text-center">Tambah Komponen Biaya</div>
+                                    </a>
+                                </div>
+                                <hr/>  
+                                <div class=" table-container table-responsive table-hover table-fix">
+                                <table class="table-hover table-responsive">
+                                    <thead>
+                                    <tr>
+                                        <tr style>
+                                        <th class="no-wrap text-14" >Mata Anggaran</th>
+                                        <th class="no-wrap text-14">Uraian</th>
+                                        <th class="no-wrap text-14" >Jumlah Rincian</th>
+                                        <th class="no-wrap text-14">Satuan</th>
+                                        <th class="no-wrap text-14">Harga Rata-Rata</th>
+                                        <th class="no-wrap text-14" >Jumlah(Rp)</th>
+                                        <th class="no-wrap text-14">Jenis</th>
+                                        <th class="no-wrap text-14" >Aksi</th>
+                                    </tr>     
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr style="background-color: #F6F8FE;">
+                                        <td class="no-wrap text-14" >525112</td>
+                                        <td class="no-wrap text-14">Belanja Barang</td>
+                                        <td class="no-wrap text-14" >-</td>
+                                        <td class="no-wrap text-14">-</td>
+                                        <td class="no-wrap text-14">-</td>
+                                        <td class="no-wrap text-14" >Rp0</td>
+                                        <td class="no-wrap text-14">-</td>
+                                        <td class="no-wrap text-14" >-</td>
+                                    </tr>              
+                                    <tr style="height: 60px;">
+                                    <td class="inline-block" colspan="2" >
+                                        <p>525112.5521.42 (5742.994.001.056) - BIAYA ATK KEGIATAN SEMINAR/PELATIHAN/
+                                        WORKSHOP PENGEMBANGAN MUTU SDM LAYANAN MANAJEMEN</p>
+                                        <i class="fa-solid fa-pen" style="color: #0168FA;"></i></td>
+                                    <td class="no-wrap text-14">0</td>
+                                    <td class="no-wrap text-14" >-</td>
+                                    <td class="no-wrap text-14">Rp0</td>
+                                    <td class="no-wrap text-14" >Rp0</td>
+                                    <td class="no-wrap text-14" >B.T. Langsung</td>
+                                    <td class="no-wrap">
+                                        <div class="d-flex flex-row  mb-3">
+                                        <div>
+                                            <button type="button" class="btn">
+                                            <i class="fa-solid fa-plus" style="color: #0A85ED;"></i>
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn">
+                                            <img src="assets/svg-icon/trash.svg" alt="">
+                                            </button>
+                                        </div>
+                                        </div>
+                                    </td>
+                                </tr>   
+                                </tbody>
+                            </table>      
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 d-flex gap-3">
+                        <button class="button btn-navigate-form-step" 
+                                style="background-color: #ffffff;
+                                color: #0168FA;"type="button" step_number="1">Kembali</button>
+                        <button class="button btn-navigate-form-step" type="button" step_number="3">Selanjutnya</button>
+                    </div>
+                    </section>
+                         <!-- Step 3 Content, default hidden on page load. -->
+            <section id="step-3" class="form-step d-none">
+                <!-- Step 3 input fields -->
+                <div class="mt-3">
+                  <div class="card-custom">
+                      <div class="form-group">
+                          <h5 class="mb-3">TOR</h5>
+                      <hr/>
+                          <div class="input-content d-flex ">
+                              <div class="input-line">
+                                  <p class="input-text">
+                                     Judul Usulan Kegiatan
+                                  </p>
+                                  <p  class="p-2">:</P>
+                              </div>
+                              <div class="input-group">
+                                <input type ="text" class="form-control" aria-label="kode"></input>
+                            </div>
+                          </div>
+                          <div class="input-content d-flex ">
+                              <div class="input-line">
+                                  <p class="input-text">
+                                      Latar Belakang Usulan
+                                  </p>
+                                  <p  class="p-2">:</P>
+                              </div>
+                              <div class="input-group">
+                                <input type ="text" class="form-control" aria-label="kode"></input>
+                            </div>
+                          </div>
+                          <div class="input-content d-flex ">
+                              <div class="input-line">
+                                  <p class="input-text">
+                                    Program Kerja ITS
+                                  </p>
+                                  <p  class="p-2">:</P>
+                              </div>
+                              <p class="form-text">
+                                A.1.1. Peningkatan Kerjasama Global Mendukung Kualitas Akademik Ekselen dan Reputasi Internasional
+                             </p>
+                          </div>
+                          <div class="input-content d-flex " >
+                              <div class="input-line">
+                                  <p class="input-text">
+                                     Program Kerja Unit
+                                  </p>
+                                  <p  class="p-2">:</P>
+                              </div>
+                              <p class="form-text">
+                               Peningkatan penyusunan tata kelola kinerja
+                             </p>
+                          </div>
+                          <div class="input-content d-flex">
+                              <div class="input-line">
+                                  <p class="input-text">
+                                     Tujuan dan Manfaat
+                                  </p>
+                                  <p  class="p-2">:</P>
+                              </div>
+                              <div class="input-group">
+                                <input type ="text" class="form-control" aria-label="kode"></input>
+                            </div>
+                          </div>
+                          <div class="input-content d-flex">
+                              <div class="input-line">
+                                  <p class="input-text">
+                                    Kerugian jika tidak dilakukan
+                                  </p>
+                                  <p  class="p-2">:</P>
+                              </div>
+                              <div class="input-group">
+                                <input type ="text" class="form-control" aria-label="kode"></input>
+                            </div>
+                          </div>
+                          
+                          </div>
+                      </div>
+                  </div>
+                <div class="mt-4 d-flex gap-3">
+                    <button class="button btn-navigate-form-step" 
+                            style="background-color: #ffffff;
+                            color: #0168FA;"type="button" step_number="2">Kembali</button>
+                    <button class="button submit-btn" type="submit">Simpan</button>
+                </div>
+            </section>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="./../script/script.js"></script>
+</body>
+</html>
