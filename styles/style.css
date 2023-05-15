@@ -5,20 +5,16 @@
   body{
       background-color: #F5F6FA !important;
       margin: 0px;
+      width: 100%;
   }
   
   header{
   background: rgba(255, 255, 255, 0.85);
   box-shadow: 0px 5px 10px rgba(208, 215, 239, 0.2);
   
-  /* Inside auto layout */
-  /* flex: none;
-  order: 0;
-  flex-grow: 0; */
   }
   
-  /*scrollbar*/
-  /* width */
+
   ::-webkit-scrollbar {
     width:1px;
     height: 10px;
@@ -60,6 +56,9 @@
   flex-grow: 0;
   }
   
+  @media only screen and (min-width: 601px) and (max-width: 900px) {
+    /* CSS rules untuk ukuran layar antara 601px dan 900px */
+  }
   thead{
     width: 100%;
   }
@@ -237,12 +236,13 @@
     width: 100%;
   }
   th {
-      font-size: 14px;
-      font-family: roboto;
+      font-size: 12px;
+      font-family: poppins;
       height: 64px;
       padding: 24px 24px;
       align-items: center;
       border-bottom: 1px solid #D9DFE8;
+      color: #001737;
       width: auto;
   }
   
@@ -255,25 +255,48 @@
   
   td {
   font-size: 14px;
-  padding: 24px 24px;
-  height: 64px;
-  font-family: roboto;
+  font-family: poppins;
   align-items: center;
-  margin: 12px;
+  padding: 24px;
   
   }
+
+p.table-text{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: start;
+  color: #001737;
+  }
   
-  .form-check{
-      display: flex;
-      flex-direction: row;
-      justify-content: start;
-      align-items: center;
-      
-      flex: none;
-      order: 0;
-      flex-grow: 0; 
-      font-size: 14px; 
+  p.table-text-money{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+    color: #001737;
+    }
+p.table-text-small{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #8392A5;
+  }
   
+.form-check{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex: none;
+  order: 0;
+  flex-grow: 0; 
+  font-size: 14px; 
   }
   
   select {
@@ -337,19 +360,27 @@
   
   button.button.button-transparent{
     justify-content: start;
-    display: flex;
     background-color: white;
-    box-sizing: border-box;
     flex-direction: row;
-    padding: 8px 17px;
-    gap: 10px;
+    width: fit-content;
     border-radius: 10px;
     border: 1px solid #FFFFFF;
     flex: none;
     order: 0;
     flex-grow: 0;
-    font-size: 14px;
-    font-weight: 600;
+    font-family: poppins;
+  }
+
+  button.button-transparent{
+    justify-content: start;
+    background-color: white;
+    flex-direction: row;
+    width: fit-content;
+    border-radius: 10px;
+    border: 1px solid #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
     font-family: poppins;
   }
   .badge {
@@ -384,10 +415,6 @@
   background: #FFFFFF;
   border-radius: 6px;
   border-color: #D9DFE8;
-  ;
-  
-  /* Inside auto layout */
-  
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -406,6 +433,7 @@
   align-items: center;
   color: #222222;
   }
+
   /*INPUT*/
   .form-group {
     width: 100%;
@@ -685,3 +713,7 @@
   .form-stepper a {
     cursor: default;
   }  
+
+  .hiddenRow {
+    padding: 0 !important;
+}
