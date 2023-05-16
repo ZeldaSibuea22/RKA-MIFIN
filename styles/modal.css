@@ -1,0 +1,46 @@
+.modal-content {
+  
+    width: 90%;
+    max-width: fit-content;
+}
+
+.modal-body {
+
+    margin: 0 auto;
+}
+
+.input-group-modal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 24px 12px;
+    
+      }
+input.form-control-modal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 8px;
+    gap: 4px;
+    width: 190px;
+    height: 34px;
+    background: #FFFFFF;
+    border: 1px solid #CBD2DA;
+    border-radius: 7px;
+}
+
+select.filter-modal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 8px;
+    gap: 4px;
+
+    width: 230px;
+    height: 34px;
+
+    background: #FFFFFF;
+    border: 1px solid #CBD2DA;
+    border-radius: 7px;
+}
+

@@ -62,6 +62,7 @@
   thead{
     width: 100%;
   }
+ 
   
   .content{
       width: 100%;
@@ -236,7 +237,7 @@
     width: 100%;
   }
   th {
-      font-size: 12px;
+      font-size: 14px;
       font-family: poppins;
       height: 64px;
       padding: 24px 24px;
@@ -245,7 +246,20 @@
       color: #001737;
       width: auto;
   }
+
+  th.table-modal-head {
+    font-size: 12px;
+    font-family: poppins;
+    height: 64px;
+    padding: 24px 24px;
+    align-items: center;
+    border-bottom: 1px solid #D9DFE8;
+    color: #001737;
+    width: auto;
+    font-weight: 500px;
+  }
   
+
   tr {
       padding: 12px;
       margin: 12px;
@@ -269,6 +283,21 @@ p.table-text{
   text-align: start;
   color: #001737;
   }
+
+  td.table-text-modal {
+  
+    font-size: 12px;
+    font-family: poppins;
+    height: 64px;
+    padding: 24px 24px;
+    align-items: center;
+    border-bottom: 1px solid #D9DFE8;
+    color: #001737;
+    width: auto;
+    font-weight: 500;
+  }
+      
+  
   
   p.table-text-money{
     font-family: 'Roboto';
@@ -495,6 +524,7 @@ p.table-text-small{
     
     }
   
+
   .input-group .form-control {
     border-color:  #D9DFE8;
   }
