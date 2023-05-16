@@ -393,8 +393,6 @@ p.table-text-small{
     border: 1px solid #0168FA;
     border-radius: 10px;
     flex: none;
-    order: 0;
-    flex-grow: 0;
     font-size: 14px;
     font-weight: 600;
     font-family: poppins;
@@ -446,6 +444,40 @@ p.table-text-small{
   border: 1px solid #0168FA;
   border-radius: 10px;
 
+  }
+
+  .button.btn-outline{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 17px;
+    gap: 10px;
+    color: #0168FA;
+    width: 132px;
+    height: 44px;
+    background-color: #FFFFFF;
+    border: 1px solid #0168FA;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+
+  .button.btn-outline-red{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 17px;
+    gap: 10px;
+    color: #B50000;
+    width: 132px;
+    height: 44px;
+    background-color: #FFFFFF;
+    border: 1px solid #B50000;
+    border-radius: 10px;
+    font-weight: 600;
   }
 
   a {
@@ -504,23 +536,32 @@ p.table-text-small{
   }
   
   .input-content{
-      align-items: top !important;
-      margin-top: 12px;
-      width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 7px 10px;
+    gap: 8px;
+    
     
   }
+  
+  .input-content-anggaran {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 7px 10px;
+    gap: 8px;
+    height: 40px;
+  }
   .input-line{
-   display: flex;
-  flex-direction: row;
-  gap: 4px;
-  height: 100%;
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
-  margin-right: 12px;
-  align-items: start;
-  color: #8392A5;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #8392A5;
   }
   
   
@@ -530,13 +571,15 @@ p.table-text-small{
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  /* Greyblue/Grey-1 */
   color: #8392A5;
   flex: none;
   display: inline-block;
-  padding: 2px;
-  order: 0;
-  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 7px 10px;
+  gap: 8px;
+  height: 35px;
   }
   
   .input-group{
