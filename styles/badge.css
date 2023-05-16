@@ -1,0 +1,42 @@
+.badge.badge-accept{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 10px;
+    width: 85px;
+    height: 30px;
+    color: #027600;
+    background: rgba(194, 240, 214, 0.3);
+    border-radius: 5px;
+
+}
+
+.badge.badge-reject{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 10px;
+    width: fit-content;
+    height: 30px;
+    color: #EB1D1D;
+    background: rgba(240, 197, 194, 0.3);
+    border-radius: 5px;
+}
+
+.badge.badge-progress{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 10px;
+    width: fit-content;
+    height: 30px;
+    color: #0D41E1;
+    background: rgba(194, 204, 240, 0.3);
+    border-radius: 5px;
+}
