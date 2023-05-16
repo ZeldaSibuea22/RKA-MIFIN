@@ -27,6 +27,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="./../styles/modal.css">
     <link rel="stylesheet" href="./../styles/style.css">
     <title>Detail Telaah Anggaran</title>
 </head>
@@ -241,9 +242,9 @@
                           </table>
                        </div>
                        <div class="d-flex mt-4 gap-8">
-                        <button class="button btn-outline-red me-3">Blokir</button>
-                        <button class="button btn-outline me-3">Revisi</button>
-                        <button class="button btn-navigate-form-step" type="button">Selanjutnya</button>
+                        <button class="button btn-outline-red me-3" data-bs-toggle="modal" data-bs-target="#Modalblokir">Blokir</button>
+                        <button class="button btn-outline me-3" data-bs-toggle="modal" data-bs-target="#Modalrevisi">Revisi</button>
+                        <button class="button btn-navigate-form-step" type="button" data-bs-toggle="modal" data-bs-target="#Modalsetuju">Setuju</button>
                         </div> 
                     </div>  
                  </div> 
@@ -255,5 +256,113 @@
          </div>
      </div>
  </div>
+
+<!-- Modal -->
+ <!-- Modal Blokir -->
+<div class="modal fade" id="Modalblokir" tabindex="-1" aria-labelledby="modalblokir" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-content-konfirmasi">
+        <div class="modal-body modal-body-konfirmasi">
+          Apakah Anda yakin untuk memblokir RKA ini?
+        </div>
+        <div class="align-item-center">
+          <button type="button" class="btn-secondary-modal" data-bs-dismiss="modal">Tidak</button>
+          <button type="button" class="btn-primary-modal" data-bs-toggle="modal" data-bs-target="#ModalBlokir" data-bs-dismiss="modal">Ya</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- Modal Setuju -->
+ <div class="modal fade" id="Modalsetuju" tabindex="-1" aria-labelledby="modalblokir" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-content-konfirmasi">
+        <div class="modal-body modal-body-konfirmasi">
+          Apakah Anda yakin untuk menyetujui program kerja ini?
+        </div>
+        <div class="align-item-center">
+          <button type="button" class="btn-secondary-modal" data-bs-dismiss="modal">Tidak</button>
+          <button type="button" class="btn-primary-modal" data-bs-toggle="modal" data-bs-target="#ModalBerhasil" data-bs-dismiss="modal">Ya</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Revisi -->
+  <div class="modal fade" id="Modalrevisi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-content-revisi">
+        <div class="d-flex">
+          <h6 class="modal-title-revisi" id="Modalrevisi">Masukkan Keterangan Revisi</h6>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="d-flex mb-3">
+              <textarea class="form-control" id="message-text" style="width:500px"></textarea>
+            </div>
+          </form>
+        </div>
+        <div>
+            <button type="button" class="btn-secondary-modal" data-bs-dismiss="modal">Batal</button>
+            <button type="button" class="btn-primary-modal" data-bs-toggle="modal" data-bs-target="#ModalRevisi" data-bs-dismiss="modal">Revisi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Pop Up -->
+<!-- Pop Up Setuju -->
+<div class="modal fade" id="ModalBerhasil" aria-hidden="true" aria-labelledby="ModalBerhasil" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-content-popup">
+        <div class="modal-body modal-body-konfirmasi d-block ">
+        <div>
+        <img clas="img-modal" src="./../assets/svg-icon/succes-48.svg" alt="">  
+        </div>
+        <p class="p-modal">RKA berhasil disetujui</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Pop Up Blokir -->
+<div class="modal fade" id="ModalBlokir" aria-hidden="true" aria-labelledby="ModalBlokir" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-content-popup">
+        <div class="modal-body modal-body-konfirmasi d-block ">
+        <div>
+        <img clas="img-modal" src="./../assets/svg-icon/succes-48.svg" alt="">  
+        </div>
+        <p class="p-modal">RKA berhasil diblokir</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Pop Up Revisi -->
+<div class="modal fade" id="ModalRevisi" aria-hidden="true" aria-labelledby="ModalRevisi" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-content-popup">
+        <div class="modal-body modal-body-konfirmasi d-block ">
+        <div>
+        <img clas="img-modal" src="./../assets/svg-icon/succes-48.svg" alt="">  
+        </div>
+        <p class="p-modal">RKA berhasil direvisi</p>
+        </div>
+      </div>
+    </div>
+</div>
+  
+
+<!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+          crossorigin="anonymous"
+        ></script>
 </body>
 </html>
