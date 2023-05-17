@@ -274,131 +274,143 @@
                             </div>
                           </td>
                         </tr>
-                            </tbody>
-                          </table>
-                       </div>
+
+                            <!-- 3 -->   
+                                                  <tr>
+                                                    <td class="table-fill"><i class="bi bi-chevron-down"></i></td>        
+                                                    <td class="no wrap table-fill" style="flex-direction: column;">
+                                                        <p class="table-text">S1-SISTEM INFORMASI</p>
+                                                        <P class="table-text-small">123000</P>
+                                                    </td>
+                                                    <td class="no-wrap">
+                                                      <p class="table-text">Penguatan jejaring dan kerjasama global</p>
+                                                  </td>
+                                                  <td class="no wrap table-fill">
+                                                      <p class="table-text">Rutin</p>
+                                                  </td>
+                                                  <td class="no-wrap table-fill">
+                                                      <p class="table-text">Jan , Feb , Mar , Apr , Mei , Jun</p>
+                                                  </td>
+                                                  <td class="no-wrap text-end table-fill" style="flex-direction: column;">
+                                                      <p class="table-text fw-bold">Rp 400.000.000 </p>
+                                                  </td>
+                                                  <td class="no-wrap table-fill" style="flex-direction: column;">
+                                                      <div class="align-item-center" style="padding-inline: 24px; align-items: center;">
+                                                          <span class="badge badge-progress text-center">Direvisi</span>
+                                                      </div>
+                                                  </td>
+                                                  </tr>
+                        
+                                                  <!-- Collapse -->
+                                                  <tr>
+                                                    <td colspan="8" class="align-item-middle" style="background-color: #F6F8FE;">
+                                                      <div style="background-color:white !important;">
+                                                      <table class="table-responsive" style="width: 100%;">
+                                                        <thead>
+                                                          <tr>
+                                                            <th class="no-wrap" data-field="ProkerUnit" data-sortable="true">PROKER UNIT</th>
+                                                            <th class="no-wrap" data-field="IndikatorUnit" data-sortable="true">INDIKATOR UNIT</th>
+                                                            <th class="no-wrap" data-field="keterangan" data-sortable="true">KETERANGAN</th>
+                                                          </tr>
+                                                        </thead>
+                                                    <tbody>    
+                                                            <tr>    
+                                                            <td class="no wrap table-fill">
+                                                                <p class="table-text">Peningkatan Kerjasama dengan PTLN</p>
+                                                            </td>
+                                                          <td class="no wrap table-fill">
+                                                              <ul>
+                                                                  <li class="table-text">Rasio Jumlah Publikasi Bersama (Co-Authorship) Insternasionl Kumulatif</li>
+                                                                  <li class="table-text">Rasio jumlah publikasi di jurnal internasional terindeks scopus ata miimum setara</li>
+                                                                </ul>
+                                                          </td>
+                                                          <td class="no wrap table-fill">
+                                                              <p class="table-text text-success">Disetujui</p>
+                                                              <p class="table-text">Oleh UP3 (Almira Innasty Wibowo) pada 18-01-2023 11:08:29</p>
+                                                          </td>
+                                                          </tr>    
+                                                      </table>
+                                                    </div>
+                                                  </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    </div>
+                                </div> 
+                            </div>  
+                            </article>
+                        </div>
                     </div>
-                 </div> 
-               </div>  
-            </article>
-         </div>
+                    </div>
+                </div>                      
+
+  <!-- Modal Persetujuan-->
+  <!-- Modal Setuju -->
+ <div class="modal fade" id="Modalsetuju" tabindex="-1" aria-labelledby="modalblokir" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-content-konfirmasi">
+        <div class="modal-body modal-body-konfirmasi">
+          Apakah Anda yakin untuk menyetujui program kerja ini?
+        </div>
+        <div class="align-item-center">
+          <button type="button" class="btn-secondary-modal" data-bs-dismiss="modal">Tidak</button>
+          <button type="button" class="btn-primary-modal" data-bs-toggle="modal" data-bs-target="#ModalBerhasil" data-bs-dismiss="modal">Ya</button>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Modal Pagu-->
-  <div class="modal" id="myModal">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content" style="width:fit-content">
-  
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h6 class="modal-title">Edit Pagu</h6>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <!-- Modal Revisi -->
+  <div class="modal fade" id="Modalrevisi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-content-revisi">
+        <div class="d-flex">
+          <h6 class="modal-title-revisi" id="Modalrevisi">Masukkan Keterangan Revisi</h6>
         </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body text-nowrap">
-            <table class="table table-hover table-responsive" style="table-layout: auto; width: 100%;">
-      <thead>
-        <tr class="modal-table" style>
-          <th class="no-wrap table-modal-head">Tanggal</th>
-          <th class="no-wrap table-modal-head">Versi Pagu</th>
-          <th class="no-wrap table-modal-head">Komponen</th>
-          <th class="no-wrap table-modal-head">Jenis</th>
-          <th class="no-wrap table-modal-head">Mata Uang</th>
-          <th class="no-wrap table-modal-head">Jumlah</th>
-          <th class="no-wrap table-modal-head">Pagu Sebelum</th>
-          <th class="no-wrap table-modal-head">Pagu Sesudah</th>
-          <th class="no-wrap table-modal-head">Keterangan</th>
-          <th class="no-wrap table-modal-head">Aksi</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="modal-table">
-          <td class="table-text-modal">2023-04-10</td>
-          <td class="table-text-modal">Indikatif</td>
-          <td class="table-text-modal">Awal</td>
-          <td class="table-text-modal">+</td>
-          <td class="table-text-modal">Rupiah</td>
-          <td class="table-text-modal">Rp2.000.000</td>
-          <td class="table-text-modal">Rp10.000.000</td>
-          <td class="table-text-modal">Rp8.000.000</td>
-          <td class="table-text-modal">Pagu Awal 2023</td>
-          <td class="no-wrap table-text-modal"><button
-            class="button button-transparent d-flex p-0">
-            <i style="color: #B50000; size: 14px;" class="fa-regular fa-trash-can p-0 mt-1 me-2"></i>
-            <div class="text-color-white text-fw-500 text-12 text-center"
-                style="color: #B50000; font-size: 12px">Hapus</div>
+        <div class="modal-body">
+          <form>
+            <div class="d-flex mb-3">
+              <textarea class="form-control" id="message-text" style="width:500px"></textarea>
             </div>
-         </td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
-
-    <!-- Modal Isian -->
-    <div
-    class="util-container display-flex justify-content-space-between align-item-center"
-  >
-    <div class="form-container d-flex" style="width: 1200px; justify-content: center;">
-      <div class="input-group-modal">
-        <input type ="text" class="form-control-modal" aria-label="kode" placeholder="Tanggal"></input>
-     </div>
-        
-      <div class="form-check p-2 m-1">
-            <select
-            class="filter-modal text-14 text-color-grey-filter"
-            style="width: 120px;"
-            name="periode"
-            id="periode"
-            onchange="changeColor(this)"
-        >
-            <option value="" selected>Komponen</option>
-            <option value="Informatika">S1-Informatika</option>
-            <option value="Sistem Informasi">S1-Sistem Informasi</option>
-            <option value="teknik komputer">S1-Teknik Komputer</option>
-            <option value="teknik elektro">S1-Teknik Elektro</option>
-        </select>
-      </div>
-
-      <div class="input-group-modal">
-        <input type ="text" class="form-control-modal" aria-label="kode" placeholder="Mata Uang"></input>
-      </div>
-        
-      <div class="input-group-modal">
-        <input type ="text" class="form-control-modal" aria-label="kode" placeholder="Jumlah"></input>
-     </div>
-
-     <div class="input-group-modal">
-      <input type ="text" class="form-control-modal" aria-label="kode" placeholder="Keterangan"></input>
-    </div>
-
-    <div class="input-group-modal">
-    <button
-            class="button button-transparent d-flex p-0">
-            <i class="bi bi-file-earmark-text" style="color: #0168FA;"></i>
-            <div class="text-color-white text-fw-500 text-12 text-center"
-                style="color: #0168FA; font-size: 12px; padding-block: 7px;">Simpan</div>
-            </div>
-          </button>
+          </form>
         </div>
-    </div>
-  
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <div class="mt-4 d-flex gap-3">
-            <button class="button btn-navigate-form-step" 
-                    style="background-color: #ffffff;
-                    color: #0168FA;"type="button">Batal</button>
-            <button class="button btn-navigate-form-step " type="button">Selesai</button>
+        <div>
+            <button type="button" class="btn-secondary-modal" data-bs-dismiss="modal">Batal</button>
+            <button type="button" class="btn-primary-modal" data-bs-toggle="modal" data-bs-target="#ModalRevisi" data-bs-dismiss="modal">Revisi</button>
         </div>
-        </div>
-  
       </div>
     </div>
   </div>
 
+<!-- Pop Up -->
+<!-- Pop Up Setuju -->
+<div class="modal fade" id="ModalBerhasil" aria-hidden="true" aria-labelledby="ModalBerhasil" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-content-popup">
+        <div class="modal-body modal-body-konfirmasi d-block ">
+        <div>
+        <img clas="img-modal" src="./../assets/svg-icon/succes-48.svg" alt="">  
+        </div>
+        <p class="p-modal">Program Kerja Berhasil Disetujui</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Pop Up Revisi -->
+<div class="modal fade" id="ModalRevisi" aria-hidden="true" aria-labelledby="ModalRevisi" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-content-popup">
+        <div class="modal-body modal-body-konfirmasi d-block ">
+        <div>
+        <img clas="img-modal" src="./../assets/svg-icon/succes-48.svg" alt="">  
+        </div>
+        <p class="p-modal">RKA berhasil direvisi</p>
+        </div>
+      </div>
+    </div>
+</div>
     
  
 
