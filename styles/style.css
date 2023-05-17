@@ -290,6 +290,15 @@ p.table-text{
   color: #001737;
   }
 
+  li.table-text{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: start;
+  color: #001737;
+  }
+
   td.table-text-modal {
   
     font-size: 12px;
@@ -438,13 +447,29 @@ p.table-text-small{
   padding: 8px 17px;
   gap: 10px;
   color: #0168FA;
-  width: 114px;
+  width: fit-content;
   height: 37px;
   background-color: #FFFFFF;
   border: 1px solid #0168FA;
   border-radius: 10px;
 
   }
+
+  .button.btn-fill-mini {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px 17px;
+    gap: 10px;
+    color: #FFFFFF;
+    width: fit-content;
+    height: 37px;
+    background-color: #0168FA;
+    border: 1px solid #0168FA;
+    border-radius: 10px;
+  
+    }
 
   .button.btn-outline{
     box-sizing: border-box;
