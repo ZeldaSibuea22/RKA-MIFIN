@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="https://my.its.ac.id/assets/media/favicons/favicon-web.png"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+    crossorigin="anonymous"
+    />
+    <link
+    href="https:/s/cdn.datatables.net/v/dt/jqc-1.12.4/dt-1.13.4/r-2.4.1/datatables.min.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
+    <script src="https://kit.fontawesome.com/a2752e5337.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+
+        <!-- INCLUDES -->
+
+    <link rel="stylesheet" href="./../styles/style.css">
+    <link rel="stylesheet" href="./../styles/modal.css">
+    <link rel="stylesheet" href="./../styles/badge.css">
+    <title>Persetujuan RKA</title>
+</head>
+
+<body>
+    <div>
+       <!-- title -->  
+    <object data="./../layout/header.html" type="text/html" height="100px" width="100%"></object> 
+        <div class="d-flex w-100 py-2">
+            
+                <object class=""type="text/html" data="./../layout/sidebar.html" width="120" height="300"></object>
+        
+            <!-- Isi Page -->
+            <div class="w-100 px-5">
+                <section class="w-100">
+                    <div class="content-title-container">
+                        <img src="./../assets/svg-icon/arrow-left.svg" alt="arrow-left" />
+                        <div class="title text-color-dark text-fw-500">
+                            Persetujuan RKA
+                        </div>
+                    </div>
+                </section>
+                <article class="content">
+                    <div class="card-custom align-item-center py-2">
+                      <div
+                        class="util-container display-flex justify-content-space-between align-item-center"
+                      >
+                        <div class="form-container display-flex" style="width: 100%;">
+                            
+                            <div class="form-check p-2 m-1">
+                                <label class="form-check-label text-14 for="flexCheckDefault" style="font-family: poppins;">
+                                    Unit Kerja :
+                                  </label>
+                                    <select
+                                    class="filter text-14 text-color-grey-filter"
+                                    style="width: 330px;"
+                                    name="periode"
+                                    id="periode"
+                                    onchange="changeColor(this)"
+                                >
+                                    <option value="" selected>Unit</option>
+                                    <option value="Informatika">S1-Informatika</option>
+                                    <option value="Sistem Informasi">S1-Sistem Informasi</option>
+                                    <option value="teknik komputer">S1-Teknik Komputer</option>
+                                    <option value="teknik elektro">S1-Teknik Elektro</option>
+                                </select>
+                              </div>
+            
+                      </div>
+                  </div>
+                </div>
+            
+                <!--Table-->
+                <div class="card-custom">
+                    <div class="form-group">
+                        <h5 class="title-card mb-3">Persetujuan RKA Operasional DPTSI Tahun Anggaran 2023</h5>
+                        <div class="table-container table-hover table-fix">
+                            <table class="table table-hover table-responsive">  
+                          <thead class="gap-3">
+                            <tr>
+                              <th class="no-wrap table-head " data-field="Kegiatan" data-sortable="true">NAMA KEGIATAN</th>
+                              <th class="no-wrap table-head" data-field="sumberdana" data-sortable="true">SUMBER DANA</th>
+                              <th class="no-wrap table-head" data-field="sifatkegiatan" data-sortable="true">SIFAT KEGIATAN</th>
+                              <th class="no-wrap table-head" data-field="sifatkegiatan" data-sortable="true">VOLUME OUTPUT</th>
+                              <th class="no-wrap table-head" data-field="jadwal" data-sortable="true">JADWAL</th>
+                              <th class="no-wrap table-head" data-field="statustelaah" data-sortable="true">STATUS</th>
+                              <th class="no-wrap table-head" data-field="statustelaah" data-sortable="true"></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <!-- 1 -->
+                            <tr>   
+                              <td class="no wrap table-fill">
+                                  <p class="table-text">Pemeliharaan fasilitas pendukung operasional perkantoran</p>
+                              </td>
+                            <td class="no wrap table-fill">
+                                <p class="table-text">NON PNBP</p>
+                            </td>
+                            <td class="no wrap table-fill">
+                                <p class="table-text">Rutin</p>
+                            </td>
+                            <td class="no wrap table-fill">
+                                <p class="table-text">1 Tahun</p>
+                            </td>
+                            <td class="no wrap table-fill">
+                                <p class="table-text">Jan, Feb, Mar, Apr, Jun, Juli</p>
+                            </td>
+                            <td class="no wrap table-fill">
+                               <span class="badge badge-accept">Disetujui</span>
+                            </td>
+                            <td class="no-wrap" style="padding-block: 16px;">
+                            <a
+                                href ="DetailPersetujuanRKA.html" class="button btn-outline-mini" type="button" >Lihat Detail</button>
+                            </a>
+                            </td>
+                            </tr>
+
+                            <!-- 2 -->
+                            <tr>   
+                                <td class="no wrap table-fill">
+                                    <p class="table-text">Rapat Koordinasi Seluruh DPTSI</p>
+                                </td>
+                              <td class="no wrap table-fill">
+                                  <p class="table-text">NON PNBP</p>
+                              </td>
+                              <td class="no wrap table-fill" style="flex-direction: column;">
+                                <p class="table-text">Rutin</p>
+                                <button class="button btn-outline-mini" type="button">Lihat TOR</button>
+                              </td>
+                              <td class="no wrap table-fill">
+                                <p class="table-text">1 Tahun</p>
+                            </td>
+                              <td class="no wrap table-fill">
+                                  <p class="table-text">Jan, Feb, Mar, Apr, Jun, Juli</p>
+                              </td>
+                              <td class="no wrap table-fill">
+                                 <span class="badge badge-reject">Belum Ditelaah</span>
+                              </td>
+                              <td class="no-wrap" style="padding-block: 16px;">
+                                <a
+                                    href ="DetailPersetujuanRKA.html" class="button btn-outline-mini" type="button" >Lihat Detail</button>
+                                </a>
+                              </td>
+  
+
+                               <!-- 3 -->
+                               <tr>   
+                                <td class="no wrap table-fill">
+                                    <p class="table-text">Operasional Rutin Perkantoran</p>
+                                </td>
+                              <td class="no wrap table-fill">
+                                  <p class="table-text">NON PNBP</p>
+                              </td>
+                              <td class="no wrap table-fill">
+                                <p class="table-text">Rutin</p>
+                              </td>
+                              <td class="no wrap table-fill">
+                                <p class="table-text">1 Tahun</p>
+                            </td>
+                              <td class="no wrap table-fill">
+                                  <p class="table-text">Jan, Feb, Mar, Apr, Jun, Juli</p>
+                              </td>
+                              <td class="no wrap table-fill">
+                                 <span class="badge badge-reject">Revisi</span>
+                              </td>
+                              <td  style="padding-block: 14px; width: max-content;">
+                                <a
+                                    href ="DetailPersetujuanRKA.html" class="button btn-outline-mini" type="button" >Lihat Detail</button>
+                                </a>
+                              </td>
+                              </tr>
+
+                               <!-- 4-->
+                               <tr>   
+                                <td class="table-fill">
+                                    <p class="table-text">Pengadaan layar monitor developer untuk pengembangan aplikasi</p>
+                                </td>
+                              <td class="no wrap table-fill">
+                                  <p class="table-text">NON PNBP</p>
+                              </td>
+                              <td class="no wrap table-fill" style="flex-direction: column;">
+                                <p class="table-text">Pengembangan</p>
+                                <button class="button btn-outline-mini" type="button">Lihat TOR</button>
+                              </td>
+                              <td class="no wrap table-fill">
+                                <p class="table-text">1 Tahun</p>
+                            </td>
+                              <td class="no wrap table-fill">
+                                  <p class="table-text">Mar</p>
+                              </td>
+                              <td class="no wrap table-fill">
+                                 <span class="badge badge-accept">Disetujui</span>
+                              </td>
+                              <td class="no-wrap" style="padding-block: 16px;">
+                                <a
+                                    href ="DetailPersetujuanRKA.html" class="button btn-outline-mini" type="button" >Lihat Detail</button>
+                                </a>
+                             </td>
+                              </tr>
+                          </table> 
+                       </div>
+                    </div>
+                 </div> 
+            </article>
+         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Content -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+          crossorigin="anonymous"
+        ></script>
+
+
+</body>
+
+</html>

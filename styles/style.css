@@ -265,7 +265,12 @@
     font-weight: 500px;
   }
   
-
+ h5.title-card {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+ }
   tr {
       padding: 12px;
       margin: 12px;
@@ -316,7 +321,6 @@ td.table-fill{
   
   align-items: center;
   padding: 16px;
-  gap: 12px;
   height: 92px;
 }
   
@@ -447,11 +451,12 @@ p.table-text-small{
   padding: 8px 17px;
   gap: 10px;
   color: #0168FA;
-  width: fit-content;
+  width: max-content;
   height: 37px;
   background-color: #FFFFFF;
   border: 1px solid #0168FA;
   border-radius: 10px;
+  font-size: 14px;
 
   }
 
