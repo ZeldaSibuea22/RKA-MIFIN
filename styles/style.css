@@ -265,12 +265,17 @@
     font-weight: 500px;
   }
   
- h5.title-card {
+ h5{
   font-family: 'Poppins';
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
  }
+
+ ul.no-dot{
+  list-style-type: none;
+  padding-left: 0px;
+}
   tr {
       padding: 12px;
       margin: 12px;
@@ -278,6 +283,9 @@
       
   }
   
+  tr.row-total{
+    background-color: #F6F8FE;
+  }
   td {
   font-size: 14px;
   font-family: poppins;
