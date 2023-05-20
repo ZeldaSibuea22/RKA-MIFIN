@@ -171,9 +171,9 @@
   padding: 8px 17px;
   gap: 10px;
   
-  width: 144px;
+  width: max-content;
   height: 40px;
-  
+  color: #FFFFFF;
   background: #0168FA;
   border-radius: 10px;
   
@@ -856,4 +856,21 @@ p.table-text-small{
 
   .hiddenRow {
     padding: 0 !important;
+}
+
+/* Search */
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
 }
