@@ -874,3 +874,7 @@ p.table-text-small{
   pointer-events: none;
   color: #aaa;
 }
+
+::placeholder {
+  color: #000000;
+}
