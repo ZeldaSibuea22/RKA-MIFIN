@@ -4,31 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href="https://my.its.ac.id/assets/media/favicons/favicon-web.png"
-    />
-    <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-    crossorigin="anonymous"
-    />
-    <link
-    href="https:/s/cdn.datatables.net/v/dt/jqc-1.12.4/dt-1.13.4/r-2.4.1/datatables.min.css"
-    rel="stylesheet"
-    />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://my.its.ac.id/assets/media/favicons/favicon-web.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https:/s/cdn.datatables.net/v/dt/jqc-1.12.4/dt-1.13.4/r-2.4.1/datatables.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
     <script src="https://kit.fontawesome.com/a2752e5337.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./../styles/modal.css">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+  
+    <!-- INCLUDES -->
+    <script src="./../js/bootstrap-table-expandable.js"></script>
+  
     <link rel="stylesheet" href="./../styles/style.css">
+    <link rel="stylesheet" href="./../styles/modal.css">
     <title>Tambah Mata Anggaran</title>
 </head>
 
@@ -37,8 +29,121 @@
        <!-- title -->  
     <object data="./../layout/header.html" type="text/html" height="100px" width="100%"></object> 
         <div class="d-flex w-100">
-            
-                <object class="bg-red"type="text/html" data="./../layout/sidebar.html" width="200" height="500"></object>
+             <!-- Sidebar -->
+    <div class="d-flex w-100">
+        <div style="padding-inline: 8px; margin-inline: 8px;">
+          <div class="unce-123">
+            <div class="profile-img">
+              <img src="./../assets/profile-default.png" alt="profile-img" />
+            </div>
+            <div class="unce-12345">
+              <div class="unce-1234 hideitem">
+                <div class="unce-1234-role text-fw-500 text-12 text-color-grey">
+                  Administrator Keuangan
+                </div>
+                <div class="unce-1234-name text-fw-500 text-14 text-color-dark">
+                  Zelda Elma Sibuea
+                </div>
+              </div>
+              <div class="toggle-sidebar">
+                <img src="./../assets/svg-icon/arrow-sidebar.svg" alt="arrow" />
+              </div>
+            </div>
+          </div>
+          <div class="navigation-container">
+            <div class="navigation-item" style="gap:36px;">
+              <img src="./../assets/svg-icon/home-icon.svg" alt="home-icon" />
+              <div
+                class="navigation-text text-fw-500 text-14 text-color-dark hideitem"
+              >
+                Beranda
+              </div>
+            </div>
+            <div class="navigation-item">
+              <img src="./../assets/svg-icon/papers.svg" alt="uang-icon" />
+              <div class="navigation-text text-fw-500 text-14 text-color-dark hideitem">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" 
+                        style="background:#F5F6FA; gap:24px;">
+                        Pagu
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body submenu"><a href ="Pagu.html" class="acc-body">Pagu Awal</a></div>
+                      <div class="accordion-body submenu"><a href ="#" class="acc-body">Tambah Pagu</a></div>
+                      <div class="accordion-body submenu"><a href ="#" class="acc-body">Transfer Alokasi Pagu</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navigation-item active">
+              <img src="./../assets/svg-icon/pencil-paper.svg" alt="pemasukan-icon" />
+              <div class="navigation-text text-fw-500 text-14 text-color-dark hideitem">
+                <div class="accordion accordion-flush" id="accordionFlushExampleTwo">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"
+                        style="gap:24px;">
+                        RKA
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionFlushExampleTwo">
+                      <div class="accordion-body"><a href ="ProgramKerja.html" class="acc-body">Program Kerja</a></div>
+                      <div class="accordion-body">
+                        <p class="acc-head">RKA</p>
+                        <div class="accordion-body submenu"><a href ="DaftarMataAnggaran.html" class="acc-body">Daftar Mata Anggaran</a></div>
+                        <div class="accordion-body submenu"><a href ="DaftarRKA.html" class="acc-body">Daftar RKA</a></div>
+                      </div>
+                      <div class="accordion-body">
+                        <p class="acc-head">TELAAH RKA</p>
+                        <div class="accordion-body submenu"><a href ="TelaahAnggaran.html" class="acc-body">Telaah Anggaran RKA</a></div>
+                      <div class="accordion-body submenu"><a href ="TelaahProgramKerja.html" class="acc-body">Telaah Program Kerja</a></div>
+                      </div>
+                      <div class="accordion-body">
+                        <p class="acc-head">FINALISASI RKA</p>
+                        <div class="accordion-body submenu"><a href ="PersetujuanRKA-KepalaUnit.html" class="acc-body">Persetujuan RKA</a></div>
+                      </div>
+                      <div class="accordion-body">
+                        <p class="acc-head">REVISI RKA</p>
+                        <div class="accordion-body submenu"><a  class="acc-body">Revisi Anggaran</a></div>
+                        <div class="accordion-body submenu"><a  class="acc-body">Revisi Kegiatan</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navigation-item">
+              <img src="./../assets/svg-icon/Group 13.svg" alt="pemasukan-icon" />
+              <div class="navigation-text text-fw-500 text-14 text-color-dark hideitem">
+                <div class="accordion accordion-flush" id="accordionFlushExampleThree">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"
+                        style="background:#F5F6FA; gap:24px;">
+                        RUP
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionFlushExampleThree">
+                      <div class="accordion-body submenu"><a href ="#" class="acc-body">Pengajuan RUP</a></div>
+                      <div class="accordion-body submenu"><a href ="#" class="acc-body">Persetujuan RUP</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of Sidebar -->
             
             <div class="w-100 px-5">
                 <section class="w-100">
@@ -258,14 +363,14 @@
 </div>
 
 <!-- Script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-          crossorigin="anonymous"
-        ></script>
+    <script src="https://ik.imagekit.io/4pufm4qbl/check1.js?updatedAt=1684798114462"> </script>
 </body>
 </html>

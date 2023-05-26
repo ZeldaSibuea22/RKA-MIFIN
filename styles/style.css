@@ -621,26 +621,27 @@ p.table-text-small{
   gap: 8px;
   height: 35px;
   }
+
   
-  .input-group{
+.input-group-mini {
+  width: 100%;
+}
+ input.form-control {
   display: flex;
   width: 100%;
-  height: 50px;
+  height: 35px;
+  border: 1px solid rgba(72, 94, 144, 0.16);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.03);
+ }
   
-  }
-  
-  .input-group-mini{
-    display: flex;
-    width: 100%;
-    height: 35px;
-    
-    }
-  
+select.form-select {
+  display: flex;
+  width: 100%;
+  height: 35px;
+  border: 1px solid rgba(72, 94, 144, 0.16);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.03);
+}
 
-  .input-group .form-control {
-    border-color:  #D9DFE8;
-  }
-  
   
   
   /*Upload file*/
@@ -894,7 +895,7 @@ p.table-text-small{
   width: 1px !important
 }
 
-.form-control {
+select.form-control {
   display: block;
   width: 100%;
   height: 34px;
@@ -966,4 +967,50 @@ p.table-text-small{
   top: 6px !important;
   right: 1px;
   width: 20px
+}
+
+.collapse__menu{
+  display: none;
+  padding: .75rem 2.25rem;
+}
+
+/* Acordion */
+.accordion-button {
+  font-family: poppins;
+  font-size: 14px;
+  font-weight: 500;
+}
+.accordion-body {
+  text-decoration: none;
+  font-family: Poppins;
+  font-size: 14px;
+  color: #001737;
+  font-weight: 400;
+  
+}
+
+a.acc-body {
+  font-family: Poppins;
+  font-size: 14px;
+  color: #001737;
+  font-weight: bold;
+}
+
+a.acc-body:hover{
+  color: #D9DFE8;
+}
+
+p.acc-head {
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+display: flex;
+align-items: center;
+color: #8392A5;
+}
+
+.accordion-body.submenu{
+  padding-inline: 0px;
+  padding-block: 12px;
 }
